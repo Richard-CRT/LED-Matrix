@@ -195,8 +195,8 @@ U 1 1 5F5D60CE
 P 8300 3650
 AR Path="/5F5D60CE" Ref="U?"  Part="1" 
 AR Path="/5F591C5D/5F5D60CE" Ref="U?"  Part="1" 
-AR Path="/5F889015/5F5D60CE" Ref="U3"  Part="1" 
-F 0 "U3" H 8300 4731 50  0000 C CNN
+AR Path="/5F889015/5F5D60CE" Ref="U4"  Part="1" 
+F 0 "U4" H 8300 4731 50  0000 C CNN
 F 1 "FT231XS" H 8300 4640 50  0000 C CNN
 F 2 "Package_SO:SSOP-20_3.9x8.7mm_P0.635mm" H 9300 2850 50  0001 C CNN
 F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT231X.pdf" H 8300 3650 50  0001 C CNN
@@ -298,8 +298,8 @@ U 1 1 5F5F2511
 P 3100 4150
 AR Path="/5F5F2511" Ref="U?"  Part="1" 
 AR Path="/5F591C5D/5F5F2511" Ref="U?"  Part="1" 
-AR Path="/5F889015/5F5F2511" Ref="U2"  Part="1" 
-F 0 "U2" H 3100 5731 50  0000 C CNN
+AR Path="/5F889015/5F5F2511" Ref="U3"  Part="1" 
+F 0 "U3" H 3100 5731 50  0000 C CNN
 F 1 "ESP32-WROOM-32" H 3100 5640 50  0000 C CNN
 F 2 "RF_Module:ESP32-WROOM-32" H 3100 2650 50  0001 C CNN
 F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" H 2800 4200 50  0001 C CNN
