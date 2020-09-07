@@ -1,0 +1,18 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP CS12ANW03
+D NKK SWITCHES - CS12ANW03 - SWITCH, SLIDE, SPDT, 3A, 250V, TH
+F http://www.nkkswitches.com/pdf/cs.pdf
+$ENDCMP
+#
+$CMP SJ1-3523N
+D Phone Connectors 3.5 MM AUDIO JACK
+F https://componentsearchengine.com/Datasheets/1/SJ1-3523N.pdf
+$ENDCMP
+#
+$CMP TC42X-2-503E
+D Res Cermet Trimmer 50K Ohm 25% 0.1W(1/10W) 1(Elec)/1(Mech)Turns (2.2 X 2.8 X 0.8mm) Footprint SMD T/R
+F https://componentsearchengine.com/Datasheets/1/TC42X-2-503E.pdf
+$ENDCMP
+#
+#End Doc Library

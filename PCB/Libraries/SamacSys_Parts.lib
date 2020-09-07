@@ -1,0 +1,70 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# CS12ANW03
+#
+DEF CS12ANW03 S 0 30 Y Y 1 F N
+F0 "S" 650 300 50 H V L CNN
+F1 "CS12ANW03" 650 200 50 H V L CNN
+F2 "CS12ANW03" 650 100 50 H I L CNN
+F3 "http://www.nkkswitches.com/pdf/cs.pdf" 650 0 50 H I L CNN
+F4 "NKK SWITCHES - CS12ANW03 - SWITCH, SLIDE, SPDT, 3A, 250V, TH" 650 -100 50 H I L CNN "Description"
+F5 "633-CS12ANW03" 650 -300 50 H I L CNN "Mouser Part Number"
+F6 "https://www.mouser.co.uk/ProductDetail/NKK-Switches/CS12ANW03?qs=4P1McwaGddbVHu%252BBZT0egw%3D%3D" 650 -400 50 H I L CNN "Mouser Price/Stock"
+F7 "NKK Switches" 650 -500 50 H I L CNN "Manufacturer_Name"
+F8 "CS12ANW03" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 600 100 600 -300 200 -300 200 100 N
+X 1 1 0 -200 200 R 50 50 0 0 P
+X 2 2 0 -100 200 R 50 50 0 0 P
+X 3 3 0 0 200 R 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
+# SJ1-3523N
+#
+DEF SJ1-3523N J 0 30 Y Y 1 F N
+F0 "J" 1250 300 50 H V L CNN
+F1 "SJ1-3523N" 1250 200 50 H V L CNN
+F2 "SJ13523N" 1250 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/SJ1-3523N.pdf" 1250 0 50 H I L CNN
+F4 "Phone Connectors 3.5 MM AUDIO JACK" 1250 -100 50 H I L CNN "Description"
+F5 "5.5" 1250 -200 50 H I L CNN "Height"
+F6 "490-SJ1-3523N" 1250 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/CUI-Devices/SJ1-3523N?qs=WyjlAZoYn50aNl0vAhb3Tg%3D%3D" 1250 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "CUI Devices" 1250 -500 50 H I L CNN "Manufacturer_Name"
+F9 "SJ1-3523N" 1250 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+S 600 100 1200 -400 0 1 6 f
+X SLEEVE 1 400 0 200 R 50 50 0 0 P
+X NO_PIN 10 1400 -200 200 L 50 50 0 0 P
+X NO_PIN_ 11 1400 -100 200 L 50 50 0 0 P
+X TIP 2 1400 -300 200 L 50 50 0 0 P
+X RING 3 1400 0 200 L 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
+# TC42X-2-503E
+#
+DEF TC42X-2-503E VR 0 30 Y Y 1 F N
+F0 "VR" -350 -250 50 V V L CNN
+F1 "TC42X-2-503E" -250 -250 50 V V L CNN
+F2 "TC42X2503E" -150 -250 50 V I L CNN
+F3 "" 150 50 50 H I L CNN
+F4 "Res Cermet Trimmer 50K Ohm 25% 0.1W(1/10W) 1(Elec)/1(Mech)Turns (2.2 X 2.8 X 0.8mm) Footprint SMD T/R" 150 -50 50 H I L CNN "Description"
+F5 "0.9" 150 -150 50 H I L CNN "Height"
+F6 "652-TC42X-2-503E" 150 -250 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.com/Search/Refine.aspx?Keyword=652-TC42X-2-503E" 150 -350 50 H I L CNN "Mouser Price/Stock"
+F8 "Bourns" 150 -450 50 H I L CNN "Manufacturer_Name"
+F9 "TC42X-2-503E" 150 -550 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+S 90 250 -100 -250 1 1 10 N
+P 2 1 1 0 110 30 110 -30 N
+P 2 1 1 0 150 0 110 0 N
+X CCW 1 0 300 50 D 50 50 1 1 P
+X WIPE 2 200 0 50 L 50 50 1 1 P
+X CW 3 0 -300 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

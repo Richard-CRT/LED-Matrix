@@ -21,8 +21,9 @@ AR Path="/5F884CF6" Ref="J1"  Part="1"
 AR Path="/5F591C5D/5F884CF6" Ref="J?"  Part="1" 
 F 0 "J1" H 1207 2567 50  0000 C CNN
 F 1 "USB_B_Micro" H 1207 2476 50  0000 C CNN
-F 2 "" H 1300 2050 50  0001 C CNN
+F 2 "Connector_USB:USB_Micro-B_Amphenol_10103594-0001LF_Horizontal" H 1300 2050 50  0001 C CNN
 F 3 "~" H 1300 2050 50  0001 C CNN
+F 4 "https://www.mouser.co.uk/ProductDetail/Amphenol-FCI/10118194-0001LF?qs=Ywefl8B65e4FIdY8OWfRQA%3D%3D" H 1150 2100 50  0001 C CNN "Product"
 	1    1150 2100
 	1    0    0    -1  
 $EndComp
@@ -181,7 +182,7 @@ AR Path="/5F884D56" Ref="D4"  Part="1"
 AR Path="/5F591C5D/5F884D56" Ref="D?"  Part="1" 
 F 0 "D4" H 2450 4485 50  0000 C CNN
 F 1 "3V3_LED" H 2450 4394 50  0000 C CNN
-F 2 "" V 2450 4250 50  0001 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 2450 4250 50  0001 C CNN
 F 3 "~" V 2450 4250 50  0001 C CNN
 	1    2450 4250
 	0    -1   -1   0   
@@ -194,7 +195,7 @@ AR Path="/5F884D5C" Ref="R1"  Part="1"
 AR Path="/5F591C5D/5F884D5C" Ref="R?"  Part="1" 
 F 0 "R1" H 2509 4546 50  0000 L CNN
 F 1 "CUR_LIMIT" H 2509 4455 50  0000 L CNN
-F 2 "" H 2450 4500 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2450 4500 50  0001 C CNN
 F 3 "~" H 2450 4500 50  0001 C CNN
 	1    2450 4500
 	1    0    0    -1  
@@ -222,8 +223,9 @@ AR Path="/5F884D6B" Ref="SW1"  Part="1"
 AR Path="/5F591C5D/5F884D6B" Ref="SW?"  Part="1" 
 F 0 "SW1" V 1246 3462 50  0000 R CNN
 F 1 "SW_SPDT" V 1155 3462 50  0000 R CNN
-F 2 "" H 1200 3650 50  0001 C CNN
+F 2 "SamacSys:CS12ANW03" H 1200 3650 50  0001 C CNN
 F 3 "~" H 1200 3650 50  0001 C CNN
+F 4 "https://www.mouser.co.uk/ProductDetail/NKK-Switches/CS12ANW03?qs=4P1McwaGddbVHu%252BBZT0egw%3D%3D" V 1200 3650 50  0001 C CNN "Product"
 	1    1200 3650
 	0    -1   -1   0   
 $EndComp
@@ -442,7 +444,7 @@ AR Path="/5F591C5D/5F96B41D" Ref="C?"  Part="1"
 AR Path="/5F889015/5F96B41D" Ref="C?"  Part="1" 
 F 0 "C1" H 1442 4546 50  0000 L CNN
 F 1 "10uF" H 1442 4455 50  0000 L CNN
-F 2 "" H 1350 4500 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 1350 4500 50  0001 C CNN
 F 3 "~" H 1350 4500 50  0001 C CNN
 	1    1350 4500
 	1    0    0    -1  
@@ -456,7 +458,7 @@ AR Path="/5F591C5D/5F9710DE" Ref="C?"  Part="1"
 AR Path="/5F889015/5F9710DE" Ref="C?"  Part="1" 
 F 0 "C2" H 2242 4546 50  0000 L CNN
 F 1 "10uF" H 2242 4455 50  0000 L CNN
-F 2 "" H 2150 4500 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2150 4500 50  0001 C CNN
 F 3 "~" H 2150 4500 50  0001 C CNN
 	1    2150 4500
 	1    0    0    -1  
@@ -556,21 +558,8 @@ Text Label 6100 2500 2    50   ~ 0
 MSGEQ7_RESET
 Text Label 6100 2400 2    50   ~ 0
 MSGEQ7_STROBE
-$Comp
-L Connector:Screw_Terminal_01x01 J5
-U 1 1 5FB21930
-P 6450 3250
-F 0 "J5" H 6530 3292 50  0000 L CNN
-F 1 "Screw_Terminal_01x01" H 6530 3201 50  0000 L CNN
-F 2 "" H 6450 3250 50  0001 C CNN
-F 3 "~" H 6450 3250 50  0001 C CNN
-	1    6450 3250
-	1    0    0    -1  
-$EndComp
-Text Label 6150 3250 2    50   ~ 0
+Text Label 4250 4650 0    50   ~ 0
 LED_OUT
-Wire Wire Line
-	6150 3250 6250 3250
 Text Label 4700 3050 0    50   ~ 0
 MSGEQ7_L_OUT
 Text Label 4700 3150 0    50   ~ 0
@@ -592,107 +581,125 @@ Wire Wire Line
 Wire Wire Line
 	4500 1550 4700 1550
 $Comp
-L Connector:AudioJack3 J3
-U 1 1 5FB5ADE2
-P 6100 3800
-F 0 "J3" H 6082 4125 50  0000 C CNN
-F 1 "AudioJack3" H 6082 4034 50  0000 C CNN
-F 2 "" H 6100 3800 50  0001 C CNN
-F 3 "~" H 6100 3800 50  0001 C CNN
-	1    6100 3800
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:Earth #PWR07
-U 1 1 5FB5D663
-P 6400 4600
-AR Path="/5FB5D663" Ref="#PWR07"  Part="1" 
-AR Path="/5F591C5D/5FB5D663" Ref="#PWR?"  Part="1" 
-F 0 "#PWR07" H 6400 4350 50  0001 C CNN
-F 1 "Earth" H 6400 4450 50  0001 C CNN
-F 2 "" H 6400 4600 50  0001 C CNN
-F 3 "~" H 6400 4600 50  0001 C CNN
-	1    6400 4600
-	1    0    0    -1  
-$EndComp
-Text Label 6600 3900 0    50   ~ 0
-AUDIO_L
-Text Label 6600 3800 0    50   ~ 0
-AUDIO_R
-Wire Wire Line
-	6400 3700 6300 3700
-$Comp
-L Connector:AudioJack3 J4
-U 1 1 5FB76A93
-P 6100 4400
-F 0 "J4" H 6082 4725 50  0000 C CNN
-F 1 "AudioJack3" H 6082 4634 50  0000 C CNN
-F 2 "" H 6100 4400 50  0001 C CNN
-F 3 "~" H 6100 4400 50  0001 C CNN
-	1    6100 4400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6400 3700 6400 4300
-Wire Wire Line
-	6300 4300 6400 4300
-Connection ~ 6400 4300
-Wire Wire Line
-	6400 4300 6400 4600
-Wire Wire Line
-	6300 3800 6450 3800
-Wire Wire Line
-	6450 3800 6450 4400
-Wire Wire Line
-	6450 4400 6300 4400
-Wire Wire Line
-	6300 3900 6500 3900
-Wire Wire Line
-	6500 3900 6500 4500
-Wire Wire Line
-	6500 4500 6300 4500
-Wire Wire Line
-	6600 3800 6450 3800
-Connection ~ 6450 3800
-Wire Wire Line
-	6500 3900 6600 3900
-Connection ~ 6500 3900
-$Comp
-L Sensor_Proximity:TSSP58P38 U2
-U 1 1 5F555A66
-P 4350 4350
-F 0 "U2" H 4338 4775 50  0000 C CNN
-F 1 "TSSP58P38" H 4338 4684 50  0000 C CNN
-F 2 "OptoDevice:Vishay_MINICAST-3Pin" H 4300 3975 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/82462/tsop581.pdf" H 5000 4650 50  0001 C CNN
-	1    4350 4350
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:Earth #PWR05
 U 1 1 5F55AF8B
-P 4850 4550
+P 4650 4350
 AR Path="/5F55AF8B" Ref="#PWR05"  Part="1" 
 AR Path="/5F591C5D/5F55AF8B" Ref="#PWR?"  Part="1" 
-F 0 "#PWR05" H 4850 4300 50  0001 C CNN
-F 1 "Earth" H 4850 4400 50  0001 C CNN
-F 2 "" H 4850 4550 50  0001 C CNN
-F 3 "~" H 4850 4550 50  0001 C CNN
-	1    4850 4550
+F 0 "#PWR05" H 4650 4100 50  0001 C CNN
+F 1 "Earth" H 4650 4200 50  0001 C CNN
+F 2 "" H 4650 4350 50  0001 C CNN
+F 3 "~" H 4650 4350 50  0001 C CNN
+	1    4650 4350
 	0    -1   -1   0   
 $EndComp
-Text Label 4850 4150 0    50   ~ 0
+Text Label 4250 4550 0    50   ~ 0
 +3.3V
-Wire Wire Line
-	4850 4150 4750 4150
-Wire Wire Line
-	4750 4550 4850 4550
 Text Label 4700 2950 0    50   ~ 0
 IR_SENSOR
 Wire Wire Line
 	4500 2950 4700 2950
-Text Label 4850 4350 0    50   ~ 0
+Text Label 4250 4450 0    50   ~ 0
 IR_SENSOR
+$Comp
+L SamacSys:SJ1-3523N J3
+U 1 1 5F5CB765
+P 5400 4000
+F 0 "J3" H 6100 4265 50  0000 C CNN
+F 1 "SJ1-3523N" H 6100 4174 50  0000 C CNN
+F 2 "SamacSys:SJ13523N" H 6650 4100 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/SJ1-3523N.pdf" H 6650 4000 50  0001 L CNN
+F 4 "Phone Connectors 3.5 MM AUDIO JACK" H 6650 3900 50  0001 L CNN "Description"
+F 5 "5.5" H 6650 3800 50  0001 L CNN "Height"
+F 6 "490-SJ1-3523N" H 6650 3700 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/CUI-Devices/SJ1-3523N?qs=WyjlAZoYn50aNl0vAhb3Tg%3D%3D" H 6650 3600 50  0001 L CNN "Mouser Price/Stock"
+F 8 "CUI Devices" H 6650 3500 50  0001 L CNN "Manufacturer_Name"
+F 9 "SJ1-3523N" H 6650 3400 50  0001 L CNN "Manufacturer_Part_Number"
+	1    5400 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L SamacSys:SJ1-3523N J4
+U 1 1 5F5DC996
+P 5400 4800
+F 0 "J4" H 6100 5065 50  0000 C CNN
+F 1 "SJ1-3523N" H 6100 4974 50  0000 C CNN
+F 2 "SamacSys:SJ13523N" H 6650 4900 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/SJ1-3523N.pdf" H 6650 4800 50  0001 L CNN
+F 4 "Phone Connectors 3.5 MM AUDIO JACK" H 6650 4700 50  0001 L CNN "Description"
+F 5 "5.5" H 6650 4600 50  0001 L CNN "Height"
+F 6 "490-SJ1-3523N" H 6650 4500 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/CUI-Devices/SJ1-3523N?qs=WyjlAZoYn50aNl0vAhb3Tg%3D%3D" H 6650 4400 50  0001 L CNN "Mouser Price/Stock"
+F 8 "CUI Devices" H 6650 4300 50  0001 L CNN "Manufacturer_Name"
+F 9 "SJ1-3523N" H 6650 4200 50  0001 L CNN "Manufacturer_Part_Number"
+	1    5400 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR07
+U 1 1 5F5E0067
+P 5700 4900
+AR Path="/5F5E0067" Ref="#PWR07"  Part="1" 
+AR Path="/5F591C5D/5F5E0067" Ref="#PWR?"  Part="1" 
+F 0 "#PWR07" H 5700 4650 50  0001 C CNN
+F 1 "Earth" H 5700 4750 50  0001 C CNN
+F 2 "" H 5700 4900 50  0001 C CNN
+F 3 "~" H 5700 4900 50  0001 C CNN
+	1    5700 4900
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	4850 4350 4750 4350
+	5800 4000 5700 4000
+Wire Wire Line
+	5700 4000 5700 4800
+Connection ~ 5700 4800
+Wire Wire Line
+	5700 4800 5700 4900
+Wire Wire Line
+	5700 4800 5800 4800
+Text Label 7050 4000 0    50   ~ 0
+AUDIO_R
+Wire Wire Line
+	6800 4000 6900 4000
+Wire Wire Line
+	6800 4800 6900 4800
+Wire Wire Line
+	6900 4800 6900 4000
+Connection ~ 6900 4000
+Text Label 7050 4300 0    50   ~ 0
+AUDIO_L
+Wire Wire Line
+	6800 5100 6950 5100
+Wire Wire Line
+	6950 5100 6950 4300
+Wire Wire Line
+	6950 4300 7050 4300
+Wire Wire Line
+	6800 4300 6950 4300
+Connection ~ 6950 4300
+Wire Wire Line
+	6900 4000 7050 4000
+NoConn ~ 6800 4100
+NoConn ~ 6800 4200
+NoConn ~ 6800 4900
+NoConn ~ 6800 5000
+$Comp
+L Connector:Screw_Terminal_01x04 J5
+U 1 1 5F654BAB
+P 3950 4550
+F 0 "J5" H 3868 4125 50  0000 C CNN
+F 1 "Screw_Terminal_01x04" H 3868 4216 50  0000 C CNN
+F 2 "" H 3950 4550 50  0001 C CNN
+F 3 "~" H 3950 4550 50  0001 C CNN
+	1    3950 4550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4150 4350 4650 4350
+Wire Wire Line
+	4150 4450 4250 4450
+Wire Wire Line
+	4150 4550 4250 4550
+Wire Wire Line
+	4150 4650 4250 4650
 $EndSCHEMATC
