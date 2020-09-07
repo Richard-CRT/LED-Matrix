@@ -35,87 +35,10 @@ Wire Wire Line
 	1150 2550 1150 2500
 NoConn ~ 1450 2300
 Connection ~ 1150 2550
-Wire Wire Line
-	2400 1900 2450 1900
-$Comp
-L Device:D_TVS D1
-U 1 1 5F884D02
-P 1600 2400
-AR Path="/5F884D02" Ref="D1"  Part="1" 
-AR Path="/5F591C5D/5F884D02" Ref="D?"  Part="1" 
-F 0 "D1" V 1554 2479 50  0000 L CNN
-F 1 "D_TVS" V 1645 2479 50  0000 L CNN
-F 2 "" H 1600 2400 50  0001 C CNN
-F 3 "~" H 1600 2400 50  0001 C CNN
-	1    1600 2400
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:D_TVS D2
-U 1 1 5F884D08
-P 2000 2400
-AR Path="/5F884D08" Ref="D2"  Part="1" 
-AR Path="/5F591C5D/5F884D08" Ref="D?"  Part="1" 
-F 0 "D2" V 1954 2479 50  0000 L CNN
-F 1 "D_TVS" V 2045 2479 50  0000 L CNN
-F 2 "" H 2000 2400 50  0001 C CNN
-F 3 "~" H 2000 2400 50  0001 C CNN
-	1    2000 2400
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:D_TVS D3
-U 1 1 5F884D0E
-P 2400 2400
-AR Path="/5F884D0E" Ref="D3"  Part="1" 
-AR Path="/5F591C5D/5F884D0E" Ref="D?"  Part="1" 
-F 0 "D3" V 2354 2479 50  0000 L CNN
-F 1 "D_TVS" V 2445 2479 50  0000 L CNN
-F 2 "" H 2400 2400 50  0001 C CNN
-F 3 "~" H 2400 2400 50  0001 C CNN
-	1    2400 2400
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1600 2550 1600 2600
-Wire Wire Line
-	1600 2600 2000 2600
-Wire Wire Line
-	2400 2600 2400 2550
-Wire Wire Line
-	2000 2550 2000 2600
-Connection ~ 2000 2600
-Wire Wire Line
-	2000 2600 2400 2600
-Wire Wire Line
-	2400 1900 2400 2250
-Wire Wire Line
-	2000 2250 2000 2100
-Wire Wire Line
-	2000 2100 1450 2100
-Wire Wire Line
-	1450 2200 1600 2200
-Wire Wire Line
-	1600 2200 1600 2250
-Wire Wire Line
-	1150 2550 1150 2600
-Wire Wire Line
-	1600 2600 1150 2600
-Connection ~ 1600 2600
-Connection ~ 1150 2600
-Connection ~ 2400 1900
-Wire Wire Line
-	2000 2100 2450 2100
-Connection ~ 2000 2100
-Wire Wire Line
-	1600 2200 2450 2200
-Connection ~ 1600 2200
-Text Label 2450 2100 0    50   ~ 0
+Text Label 1750 2100 0    50   ~ 0
 D+
-Text Label 2450 2200 0    50   ~ 0
+Text Label 1750 2200 0    50   ~ 0
 D-
-Wire Wire Line
-	1150 2600 1150 2700
 Wire Wire Line
 	1750 4650 2150 4650
 Connection ~ 1750 4650
@@ -194,7 +117,7 @@ P 2450 4500
 AR Path="/5F884D5C" Ref="R1"  Part="1" 
 AR Path="/5F591C5D/5F884D5C" Ref="R?"  Part="1" 
 F 0 "R1" H 2509 4546 50  0000 L CNN
-F 1 "CUR_LIMIT" H 2509 4455 50  0000 L CNN
+F 1 "CUR_LIMIT_5.6R" H 2509 4455 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2450 4500 50  0001 C CNN
 F 3 "~" H 2450 4500 50  0001 C CNN
 	1    2450 4500
@@ -233,7 +156,7 @@ Wire Wire Line
 	1100 3400 1100 3450
 Wire Wire Line
 	1300 3400 1300 3450
-Text Label 2450 1900 0    50   ~ 0
+Text Label 1750 1900 0    50   ~ 0
 +USB_5V
 Text Label 1300 3400 1    50   ~ 0
 +USB_5V
@@ -379,8 +302,9 @@ U 1 1 5F8C939F
 P 1250 1300
 F 0 "J2" H 1168 1517 50  0000 C CNN
 F 1 "Screw_Terminal_01x02" H 1168 1426 50  0000 C CNN
-F 2 "" H 1250 1300 50  0001 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 1250 1300 50  0001 C CNN
 F 3 "~" H 1250 1300 50  0001 C CNN
+F 4 "https://www.mouser.co.uk/ProductDetail/CUI-Devices/TB006-508-02BE?qs=vLWxofP3U2wEdOVV%2FaT04w%3D%3D" H 1250 1300 50  0001 C CNN "Product"
 	1    1250 1300
 	-1   0    0    -1  
 $EndComp
@@ -419,8 +343,6 @@ Wire Wire Line
 Wire Wire Line
 	1550 1300 1500 1300
 Connection ~ 1500 1300
-Wire Wire Line
-	1450 1900 2400 1900
 $Comp
 L power:PWR_FLAG #FLG01
 U 1 1 5F8EB554
@@ -689,8 +611,9 @@ U 1 1 5F654BAB
 P 3950 4550
 F 0 "J5" H 3868 4125 50  0000 C CNN
 F 1 "Screw_Terminal_01x04" H 3868 4216 50  0000 C CNN
-F 2 "" H 3950 4550 50  0001 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-4_P5.08mm" H 3950 4550 50  0001 C CNN
 F 3 "~" H 3950 4550 50  0001 C CNN
+F 4 "https://www.mouser.co.uk/ProductDetail/CUI-Devices/TB006-508-04BE?qs=vLWxofP3U2zpUvBkDCHiCA%3D%3D" H 3950 4550 50  0001 C CNN "Product"
 	1    3950 4550
 	-1   0    0    1   
 $EndComp
@@ -702,4 +625,12 @@ Wire Wire Line
 	4150 4550 4250 4550
 Wire Wire Line
 	4150 4650 4250 4650
+Wire Wire Line
+	1450 1900 1750 1900
+Wire Wire Line
+	1750 2100 1450 2100
+Wire Wire Line
+	1450 2200 1750 2200
+Wire Wire Line
+	1150 2550 1150 2700
 $EndSCHEMATC
