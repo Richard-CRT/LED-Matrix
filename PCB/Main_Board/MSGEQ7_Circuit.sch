@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 4
+Sheet 4 4
 Title ""
 Date ""
 Rev ""
@@ -68,7 +68,7 @@ AR Path="/5FA51921/5FA6223E" Ref="C?"  Part="1"
 AR Path="/5FAD2BE2/5FA6223E" Ref="C?"  Part="1" 
 AR Path="/5FAF419F/5FA6223E" Ref="C?"  Part="1" 
 AR Path="/5FAFFB20/5FA6223E" Ref="C16"  Part="1" 
-F 0 "C16" H 3892 2596 50  0000 L CNN
+F 0 "C20" H 3892 2596 50  0000 L CNN
 F 1 "0.1uF" H 3892 2505 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3800 2550 50  0001 C CNN
 F 3 "~" H 3800 2550 50  0001 C CNN
@@ -114,7 +114,7 @@ AR Path="/5FA51921/5FA6223C" Ref="U?"  Part="1"
 AR Path="/5FAD2BE2/5FA6223C" Ref="U?"  Part="1" 
 AR Path="/5FAF419F/5FA6223C" Ref="U?"  Part="1" 
 AR Path="/5FAFFB20/5FA6223C" Ref="U5"  Part="1" 
-F 0 "U5" H 3250 2781 50  0000 C CNN
+F 0 "U6" H 3250 2781 50  0000 C CNN
 F 1 "MSGEQ7" H 3250 2690 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3250 2100 50  0001 C CNN
 F 3 "http://mix-sig.com/images/datasheets/MSGEQ7.pdf" H 3250 2100 50  0001 C CNN
@@ -136,7 +136,7 @@ AR Path="/5FA51921/5FA30A38" Ref="C?"  Part="1"
 AR Path="/5FAD2BE2/5FA30A38" Ref="C?"  Part="1" 
 AR Path="/5FAF419F/5FA30A38" Ref="C?"  Part="1" 
 AR Path="/5FAFFB20/5FA30A38" Ref="C15"  Part="1" 
-F 0 "C15" H 3592 1596 50  0000 L CNN
+F 0 "C19" H 3592 1596 50  0000 L CNN
 F 1 "0.1uF" H 3592 1505 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3500 1550 50  0001 C CNN
 F 3 "~" H 3500 1550 50  0001 C CNN
@@ -167,8 +167,8 @@ AR Path="/5FA51921/5FA537B7" Ref="C?"  Part="1"
 AR Path="/5FAD2BE2/5FA537B7" Ref="C?"  Part="1" 
 AR Path="/5FAF419F/5FA537B7" Ref="C?"  Part="1" 
 AR Path="/5FAFFB20/5FA537B7" Ref="C13"  Part="1" 
-F 0 "C13" H 2692 2146 50  0000 L CNN
-F 1 "10pF" H 2692 2055 50  0000 L CNN
+F 0 "C17" H 2692 2146 50  0000 L CNN
+F 1 "10nF" H 2692 2055 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2600 2100 50  0001 C CNN
 F 3 "~" H 2600 2100 50  0001 C CNN
 	1    2600 2100
@@ -186,7 +186,7 @@ AR Path="/5FA51921/5FA537B6" Ref="R?"  Part="1"
 AR Path="/5FAD2BE2/5FA537B6" Ref="R?"  Part="1" 
 AR Path="/5FAF419F/5FA537B6" Ref="R?"  Part="1" 
 AR Path="/5FAFFB20/5FA537B6" Ref="R9"  Part="1" 
-F 0 "R9" H 2509 2446 50  0000 L CNN
+F 0 "R10" H 2509 2446 50  0000 L CNN
 F 1 "180k" H 2509 2355 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2450 2400 50  0001 C CNN
 F 3 "~" H 2450 2400 50  0001 C CNN
@@ -206,7 +206,7 @@ AR Path="/5FA51921/5FA537B5" Ref="C?"  Part="1"
 AR Path="/5FAD2BE2/5FA537B5" Ref="C?"  Part="1" 
 AR Path="/5FAF419F/5FA537B5" Ref="C?"  Part="1" 
 AR Path="/5FAFFB20/5FA537B5" Ref="C14"  Part="1" 
-F 0 "C14" H 2742 2596 50  0000 L CNN
+F 0 "C18" H 2742 2596 50  0000 L CNN
 F 1 "33pF" H 2742 2505 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2650 2550 50  0001 C CNN
 F 3 "~" H 2650 2550 50  0001 C CNN
@@ -231,7 +231,7 @@ U 1 1 5F57BA41
 P 1950 2400
 AR Path="/5FA245CD/5F57BA41" Ref="VR4"  Part="1" 
 AR Path="/5FAFFB20/5F57BA41" Ref="VR2"  Part="1" 
-F 0 "VR2" V 1683 2400 50  0000 C CNN
+F 0 "VR4" V 1683 2400 50  0000 C CNN
 F 1 "TC42X-2-503E" V 1774 2400 50  0000 C CNN
 F 2 "SamacSys:TC42X2503E" H 2900 2500 50  0001 L CNN
 F 3 "https://componentsearchengine.com/Datasheets/1/TC42X-2-503E.pdf" H 2900 2400 50  0001 L CNN
@@ -242,16 +242,15 @@ F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=652-TC42X-2-503E" H 2900 
 F 8 "Bourns" H 2900 1900 50  0001 L CNN "Manufacturer_Name"
 F 9 "TC42X-2-503E" H 2900 1800 50  0001 L CNN "Manufacturer_Part_Number"
 	1    1950 2400
-	0    1    1    0   
+	0    -1   1    0   
 $EndComp
-NoConn ~ 1650 2400
 $Comp
 L SamacSys:TC42X-2-503E VR3
 U 1 1 5F5A2DFD
 P 1350 2100
 AR Path="/5FA245CD/5F5A2DFD" Ref="VR3"  Part="1" 
 AR Path="/5FAFFB20/5F5A2DFD" Ref="VR1"  Part="1" 
-F 0 "VR1" V 1083 2100 50  0000 C CNN
+F 0 "VR3" V 1083 2100 50  0000 C CNN
 F 1 "TC42X-2-503E" V 1174 2100 50  0000 C CNN
 F 2 "SamacSys:TC42X2503E" H 2300 2200 50  0001 L CNN
 F 3 "https://componentsearchengine.com/Datasheets/1/TC42X-2-503E.pdf" H 2300 2100 50  0001 L CNN
@@ -262,13 +261,14 @@ F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=652-TC42X-2-503E" H 2300 
 F 8 "Bourns" H 2300 1600 50  0001 L CNN "Manufacturer_Name"
 F 9 "TC42X-2-503E" H 2300 1500 50  0001 L CNN "Manufacturer_Part_Number"
 	1    1350 2100
-	0    1    1    0   
+	0    -1   1    0   
 $EndComp
-NoConn ~ 1050 2100
 Wire Wire Line
 	1650 2100 2500 2100
 Text Label 1350 2350 3    50   ~ 0
 AUDIO
 Wire Wire Line
 	1350 2350 1350 2300
+NoConn ~ 1650 2400
+NoConn ~ 1050 2100
 $EndSCHEMATC

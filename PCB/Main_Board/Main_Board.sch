@@ -480,7 +480,7 @@ Text Label 6100 2500 2    50   ~ 0
 MSGEQ7_RESET
 Text Label 6100 2400 2    50   ~ 0
 MSGEQ7_STROBE
-Text Label 4250 4650 0    50   ~ 0
+Text Label 4250 4350 0    50   ~ 0
 LED_OUT
 Text Label 4700 3050 0    50   ~ 0
 MSGEQ7_L_OUT
@@ -502,27 +502,10 @@ Wire Wire Line
 	4500 1450 4700 1450
 Wire Wire Line
 	4500 1550 4700 1550
-$Comp
-L power:Earth #PWR05
-U 1 1 5F55AF8B
-P 4650 4350
-AR Path="/5F55AF8B" Ref="#PWR05"  Part="1" 
-AR Path="/5F591C5D/5F55AF8B" Ref="#PWR?"  Part="1" 
-F 0 "#PWR05" H 4650 4100 50  0001 C CNN
-F 1 "Earth" H 4650 4200 50  0001 C CNN
-F 2 "" H 4650 4350 50  0001 C CNN
-F 3 "~" H 4650 4350 50  0001 C CNN
-	1    4650 4350
-	0    -1   -1   0   
-$EndComp
-Text Label 4250 4550 0    50   ~ 0
-+3.3V
 Text Label 4700 2950 0    50   ~ 0
 IR_SENSOR
 Wire Wire Line
 	4500 2950 4700 2950
-Text Label 4250 4450 0    50   ~ 0
-IR_SENSOR
 $Comp
 L SamacSys:SJ1-3523N J3
 U 1 1 5F5CB765
@@ -611,20 +594,18 @@ U 1 1 5F654BAB
 P 3950 4550
 F 0 "J5" H 3868 4125 50  0000 C CNN
 F 1 "Screw_Terminal_01x04" H 3868 4216 50  0000 C CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-4_P5.08mm" H 3950 4550 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-4-2.54_1x04_P2.54mm_Horizontal" H 3950 4550 50  0001 C CNN
 F 3 "~" H 3950 4550 50  0001 C CNN
 F 4 "https://www.mouser.co.uk/ProductDetail/CUI-Devices/TB006-508-04BE?qs=vLWxofP3U2zpUvBkDCHiCA%3D%3D" H 3950 4550 50  0001 C CNN "Product"
 	1    3950 4550
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4150 4350 4650 4350
-Wire Wire Line
 	4150 4450 4250 4450
 Wire Wire Line
-	4150 4550 4250 4550
-Wire Wire Line
 	4150 4650 4250 4650
+Wire Wire Line
+	4150 4350 4250 4350
 Wire Wire Line
 	1450 1900 1750 1900
 Wire Wire Line
@@ -633,4 +614,78 @@ Wire Wire Line
 	1450 2200 1750 2200
 Wire Wire Line
 	1150 2550 1150 2700
+$Comp
+L Connector:Screw_Terminal_01x06 J6
+U 1 1 5F57EA02
+P 3950 5350
+F 0 "J6" H 3868 4825 50  0000 C CNN
+F 1 "Screw_Terminal_01x06" H 3868 4916 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-6-2.54_1x06_P2.54mm_Horizontal" H 3950 5350 50  0001 C CNN
+F 3 "~" H 3950 5350 50  0001 C CNN
+	1    3950 5350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4150 5250 4250 5250
+Wire Wire Line
+	4250 5250 4250 5350
+Wire Wire Line
+	4250 5350 4150 5350
+$Comp
+L power:Earth #PWR0101
+U 1 1 5F590EF5
+P 4250 5650
+AR Path="/5F590EF5" Ref="#PWR0101"  Part="1" 
+AR Path="/5F591C5D/5F590EF5" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0101" H 4250 5400 50  0001 C CNN
+F 1 "Earth" H 4250 5500 50  0001 C CNN
+F 2 "" H 4250 5650 50  0001 C CNN
+F 3 "~" H 4250 5650 50  0001 C CNN
+	1    4250 5650
+	1    0    0    -1  
+$EndComp
+Connection ~ 4250 5350
+Text Label 4450 5150 0    50   ~ 0
+AUDIO_L
+Wire Wire Line
+	4250 5350 4250 5650
+Wire Wire Line
+	4150 5150 4300 5150
+Wire Wire Line
+	4150 5450 4300 5450
+Wire Wire Line
+	4300 5450 4300 5150
+Wire Wire Line
+	4150 5050 4350 5050
+Wire Wire Line
+	4350 5050 4350 5550
+Wire Wire Line
+	4350 5550 4150 5550
+Text Label 4450 5050 0    50   ~ 0
+AUDIO_R
+Wire Wire Line
+	4450 5050 4350 5050
+Connection ~ 4350 5050
+Wire Wire Line
+	4450 5150 4300 5150
+Connection ~ 4300 5150
+Text Label 4250 4450 0    50   ~ 0
+IR_SENSOR
+$Comp
+L power:Earth #PWR05
+U 1 1 5F55AF8B
+P 4650 4550
+AR Path="/5F55AF8B" Ref="#PWR05"  Part="1" 
+AR Path="/5F591C5D/5F55AF8B" Ref="#PWR?"  Part="1" 
+F 0 "#PWR05" H 4650 4300 50  0001 C CNN
+F 1 "Earth" H 4650 4400 50  0001 C CNN
+F 2 "" H 4650 4550 50  0001 C CNN
+F 3 "~" H 4650 4550 50  0001 C CNN
+	1    4650 4550
+	0    -1   -1   0   
+$EndComp
+Text Label 4250 4650 0    50   ~ 0
++3.3V
+Wire Wire Line
+	4150 4550 4650 4550
 $EndSCHEMATC
