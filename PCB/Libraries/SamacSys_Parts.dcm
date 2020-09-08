@@ -1,5 +1,10 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP 74LV1T34GVH
+D Buffers & Line Drivers BUFFER LINE DRIVER
+F https://assets.nexperia.com/documents/data-sheet/74LV1T34.pdf
+$ENDCMP
+#
 $CMP CS12ANW03
 D NKK SWITCHES - CS12ANW03 - SWITCH, SLIDE, SPDT, 3A, 250V, TH
 F http://www.nkkswitches.com/pdf/cs.pdf

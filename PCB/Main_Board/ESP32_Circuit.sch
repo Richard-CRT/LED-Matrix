@@ -560,11 +560,11 @@ Connection ~ 8200 2400
 Wire Wire Line
 	8600 2400 8700 2400
 Text HLabel 2000 1650 0    50   Input ~ 0
-+USB_5V
++5V
 Text HLabel 2000 1850 0    50   Input ~ 0
 GND
 Text Label 2100 1650 0    50   ~ 0
-+USB_5V
++5V
 Text Label 2100 1850 0    50   ~ 0
 GND
 Wire Wire Line
@@ -606,9 +606,9 @@ GND
 Text Label 4950 2550 3    50   ~ 0
 GND
 Text Label 9950 4050 0    50   ~ 0
-+USB_5V
++5V
 Text Label 8200 2300 1    50   ~ 0
-+USB_5V
++5V
 Text Label 8600 2700 0    50   ~ 0
 +3.3V
 Text Label 8200 4700 3    50   ~ 0

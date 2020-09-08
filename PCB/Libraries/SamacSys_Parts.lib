@@ -1,6 +1,29 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# 74LV1T34GVH
+#
+DEF 74LV1T34GVH IC 0 30 Y Y 1 F N
+F0 "IC" 700 300 50 H V L CNN
+F1 "74LV1T34GVH" 700 200 50 H V L CNN
+F2 "SOT95P275X110-5N" 700 100 50 H I L CNN
+F3 "https://assets.nexperia.com/documents/data-sheet/74LV1T34.pdf" 700 0 50 H I L CNN
+F4 "Buffers & Line Drivers BUFFER LINE DRIVER" 700 -100 50 H I L CNN "Description"
+F5 "1.1" 700 -200 50 H I L CNN "Height"
+F6 "771-74LV1T34GVH" 700 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Nexperia/74LV1T34GVH?qs=Cb2nCFKsA8oBEV51cGATww%3D%3D" 700 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Nexperia" 700 -500 50 H I L CNN "Manufacturer_Name"
+F9 "74LV1T34GVH" 700 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 650 100 650 -300 200 -300 200 100 f
+X N.C. 1 0 0 200 R 50 50 0 0 N
+X A 2 0 -100 200 R 50 50 0 0 P
+X GND 3 0 -200 200 R 50 50 0 0 P
+X Y 4 850 0 200 L 50 50 0 0 P
+X VCC 5 850 -100 200 L 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
 # CS12ANW03
 #
 DEF CS12ANW03 S 0 30 Y Y 1 F N
