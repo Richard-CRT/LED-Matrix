@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 4
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "LED Matrix Control Board"
+Date "2020-09-08"
+Rev "v1.0"
+Comp "Richard Carter"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -21,7 +21,7 @@ AR Path="/5F884CF6" Ref="J1"  Part="1"
 AR Path="/5F591C5D/5F884CF6" Ref="J?"  Part="1" 
 F 0 "J1" H 1207 2567 50  0000 C CNN
 F 1 "USB_B_Micro" H 1207 2476 50  0000 C CNN
-F 2 "Connector_USB:USB_Micro-B_Amphenol_10103594-0001LF_Horizontal" H 1300 2050 50  0001 C CNN
+F 2 "SamacSys:AMPHENOL_10118194-0001LF" H 1300 2050 50  0001 C CNN
 F 3 "~" H 1300 2050 50  0001 C CNN
 F 4 "https://www.mouser.co.uk/ProductDetail/Amphenol-FCI/10118194-0001LF?qs=Ywefl8B65e4FIdY8OWfRQA%3D%3D" H 1150 2100 50  0001 C CNN "Product"
 	1    1150 2100
@@ -146,7 +146,7 @@ AR Path="/5F884D6B" Ref="SW1"  Part="1"
 AR Path="/5F591C5D/5F884D6B" Ref="SW?"  Part="1" 
 F 0 "SW1" V 1246 3462 50  0000 R CNN
 F 1 "SW_SPDT" V 1155 3462 50  0000 R CNN
-F 2 "SamacSys:CS12ANW03" H 1200 3650 50  0001 C CNN
+F 2 "SamacSys:25136NAH" H 1200 3650 50  0001 C CNN
 F 3 "~" H 1200 3650 50  0001 C CNN
 F 4 "https://www.mouser.co.uk/ProductDetail/NKK-Switches/CS12ANW03?qs=4P1McwaGddbVHu%252BBZT0egw%3D%3D" V 1200 3650 50  0001 C CNN "Product"
 	1    1200 3650
@@ -154,11 +154,7 @@ F 4 "https://www.mouser.co.uk/ProductDetail/NKK-Switches/CS12ANW03?qs=4P1McwaGdd
 $EndComp
 Wire Wire Line
 	1100 3400 1100 3450
-Wire Wire Line
-	1300 3400 1300 3450
 Text Label 1750 1900 0    50   ~ 0
-+USB_5V
-Text Label 1300 3400 1    50   ~ 0
 +USB_5V
 Text Label 1100 3400 1    50   ~ 0
 +POW_5V
@@ -770,14 +766,18 @@ F 3 "~" H 2150 650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H4
-U 1 1 5F70788E
-P 2900 650
-F 0 "H4" H 3000 696 50  0000 L CNN
-F 1 "MountingHole" H 3000 605 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 2900 650 50  0001 C CNN
-F 3 "~" H 2900 650 50  0001 C CNN
-	1    2900 650 
+L Artwork:Artwork U2
+U 1 1 5F584C25
+P 1050 6350
+F 0 "U2" H 1338 6401 50  0000 L CNN
+F 1 "Artwork" H 1338 6310 50  0000 L CNN
+F 2 "Artwork:dog_logo" H 1050 6700 50  0001 C CNN
+F 3 "" H 1050 6700 50  0001 C CNN
+	1    1050 6350
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	1300 3400 1300 3450
+Text Label 1300 3400 1    50   ~ 0
++USB_5V
 $EndSCHEMATC

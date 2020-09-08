@@ -3,11 +3,11 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 4
-Title ""
-Date ""
-Rev ""
-Comp ""
+Sheet 4 4
+Title "MSGEQ7 Circuit"
+Date "2020-09-08"
+Rev "v1.0"
+Comp "Richard Carter"
 Comment1 ""
 Comment2 ""
 Comment3 ""
