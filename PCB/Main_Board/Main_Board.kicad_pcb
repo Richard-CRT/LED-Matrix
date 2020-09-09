@@ -3069,7 +3069,7 @@
     )
   )
 
-  (gr_text JLCJLCJLCJLC (at 75.438 45.72) (layer F.SilkS)
+  (gr_text JLCJLCJLCJLC (at 67.183 39.751 270) (layer F.SilkS)
     (effects (font (size 0.9 0.9) (thickness 0.15)))
   )
   (gr_line (start 83.439 23.368) (end 83.439 23.495) (layer Edge.Cuts) (width 0.05) (tstamp 5F5845F5))
