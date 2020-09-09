@@ -771,7 +771,7 @@ U 1 1 5F584C25
 P 1050 6350
 F 0 "U2" H 1338 6401 50  0000 L CNN
 F 1 "Artwork" H 1338 6310 50  0000 L CNN
-F 2 "Artwork:dog_logo" H 1050 6700 50  0001 C CNN
+F 2 "Artwork:dog_2_small" H 1050 6700 50  0001 C CNN
 F 3 "" H 1050 6700 50  0001 C CNN
 	1    1050 6350
 	1    0    0    -1  
