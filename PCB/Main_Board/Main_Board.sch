@@ -766,10 +766,10 @@ F 3 "~" H 2150 650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Artwork:Artwork U2
+L Artwork:Artwork ART1
 U 1 1 5F584C25
 P 1050 6350
-F 0 "U2" H 1338 6401 50  0000 L CNN
+F 0 "ART1" H 1338 6401 50  0000 L CNN
 F 1 "Artwork" H 1338 6310 50  0000 L CNN
 F 2 "Artwork:dog_2_small" H 1050 6700 50  0001 C CNN
 F 3 "" H 1050 6700 50  0001 C CNN
@@ -780,4 +780,15 @@ Wire Wire Line
 	1300 3400 1300 3450
 Text Label 1300 3400 1    50   ~ 0
 +USB_5V
+$Comp
+L Artwork:Artwork ART2
+U 1 1 5F59357E
+P 2000 6350
+F 0 "ART2" H 2288 6401 50  0000 L CNN
+F 1 "Artwork" H 2288 6310 50  0000 L CNN
+F 2 "Artwork:cat_small_mirrored" H 2000 6700 50  0001 C CNN
+F 3 "" H 2000 6700 50  0001 C CNN
+	1    2000 6350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
