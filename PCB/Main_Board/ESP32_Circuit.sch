@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 4
 Title "ESP32 Programming Circuit"
-Date "2020-09-08"
+Date "2020-09-10"
 Rev "v1.0"
 Comp "Richard Carter"
 Comment1 ""
@@ -364,7 +364,7 @@ AR Path="/5F591C5D/5F5F2568" Ref="SW?"  Part="1"
 AR Path="/5F889015/5F5F2568" Ref="SW2"  Part="1" 
 F 0 "SW2" V 5254 2348 50  0000 L CNN
 F 1 "EN" V 5345 2348 50  0000 L CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm" H 5300 2400 50  0001 C CNN
+F 2 "SamacSys:SKTHAHE010" H 5300 2400 50  0001 C CNN
 F 3 "~" H 5300 2400 50  0001 C CNN
 	1    5300 2200
 	0    1    1    0   
@@ -426,7 +426,7 @@ AR Path="/5F591C5D/5F5F258F" Ref="SW?"  Part="1"
 AR Path="/5F889015/5F5F258F" Ref="SW3"  Part="1" 
 F 0 "SW3" V 6054 2348 50  0000 L CNN
 F 1 "BOOT" V 6145 2348 50  0000 L CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm" H 6100 2400 50  0001 C CNN
+F 2 "SamacSys:SKTHAHE010" H 6100 2400 50  0001 C CNN
 F 3 "~" H 6100 2400 50  0001 C CNN
 	1    6100 2200
 	0    1    1    0   

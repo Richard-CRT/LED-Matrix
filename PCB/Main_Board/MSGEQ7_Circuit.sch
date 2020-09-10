@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 4
 Title "MSGEQ7 Circuit"
-Date "2020-09-08"
+Date "2020-09-10"
 Rev "v1.0"
 Comp "Richard Carter"
 Comment1 ""
