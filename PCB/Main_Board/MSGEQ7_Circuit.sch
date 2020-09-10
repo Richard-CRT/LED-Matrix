@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 2 4
 Title "MSGEQ7 Circuit"
 Date "2020-09-10"
 Rev "v1.0"
