@@ -141,9 +141,9 @@ Wire Wire Line
 Wire Wire Line
 	6850 3900 6850 4600
 NoConn ~ 7600 3050
-Text Label 9100 3150 0    50   ~ 0
+Text Label 9600 3150 0    50   ~ 0
 TXD0
-Text Label 9100 3050 0    50   ~ 0
+Text Label 9600 3050 0    50   ~ 0
 RXD0
 Text Label 9100 3250 0    50   ~ 0
 ~RTS
@@ -249,8 +249,6 @@ Text Label 9100 3450 0    50   ~ 0
 Wire Wire Line
 	9000 3250 9100 3250
 Wire Wire Line
-	9000 3150 9100 3150
-Wire Wire Line
 	9000 3050 9100 3050
 Wire Wire Line
 	3100 5600 3100 5550
@@ -324,7 +322,7 @@ AR Path="/5F5F2548" Ref="C?"  Part="1"
 AR Path="/5F591C5D/5F5F2548" Ref="C?"  Part="1" 
 AR Path="/5F889015/5F5F2548" Ref="C3"  Part="1" 
 F 0 "C3" H 2042 3146 50  0000 L CNN
-F 1 "0.1uF" H 2042 3055 50  0000 L CNN
+F 1 "10uF" H 2042 3055 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 1950 3100 50  0001 C CNN
 F 3 "~" H 1950 3100 50  0001 C CNN
 	1    1950 3100
@@ -731,4 +729,32 @@ Wire Wire Line
 	7500 2700 8400 2700
 Connection ~ 7500 3650
 Connection ~ 8400 2700
+$Comp
+L Device:R_Small R?
+U 1 1 5F79186D
+P 9200 3050
+F 0 "R?" V 9396 3050 50  0000 C CNN
+F 1 "1k" V 9305 3050 50  0000 C CNN
+F 2 "" H 9200 3050 50  0001 C CNN
+F 3 "~" H 9200 3050 50  0001 C CNN
+	1    9200 3050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F7A23BF
+P 9400 3150
+F 0 "R?" V 9596 3150 50  0000 C CNN
+F 1 "1k" V 9505 3150 50  0000 C CNN
+F 2 "" H 9400 3150 50  0001 C CNN
+F 3 "~" H 9400 3150 50  0001 C CNN
+	1    9400 3150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9300 3050 9600 3050
+Wire Wire Line
+	9600 3150 9500 3150
+Wire Wire Line
+	9000 3150 9300 3150
 $EndSCHEMATC
