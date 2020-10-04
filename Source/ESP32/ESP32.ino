@@ -1,14 +1,5 @@
-#include "FastLED.h"
-
-// How many leds in your strip?
-#define MATRIX_WIDTH 20
-#define MATRIX_HEIGHT 20
-#define NUM_LEDS (MATRIX_WIDTH * MATRIX_HEIGHT)
-
-#define LED_DATA_PIN 2
-
-// Define the array of leds
-CRGB leds[NUM_LEDS];
+#include "globals.h"
+#include "brightness.h"
 
 void setAllLeds(CRGB colour)
 {
@@ -32,16 +23,33 @@ void setBorderLeds(CRGB colour)
   }
 }
 
-void setup() { 
+void setup() {
   pinMode(LED_DATA_PIN, OUTPUT);
   digitalWrite(LED_DATA_PIN, LOW);
   
+  #if defined(SERIAL_DEBUG) && SERIAL_DEBUG == 1
+    Serial.begin(115200);
+    Serial.println(F("Opened Serial Link"));
+  #endif
+  
+  #if defined(SERIAL_DEBUG) && SERIAL_DEBUG == 1
+    Serial.println(F("Setting Up FastLED, turning off LEDs, and setting up default brightness"));
+  #endif
   FastLED.addLeds<WS2812B, LED_DATA_PIN, GRB>(leds, NUM_LEDS);
-  setAllLeds(CRGB::Red);
-  FastLED.setBrightness(255);
+  setAllLeds(CRGB::Black);
+  setBrightnessPercentage(DEFAULT_BRIGHTNESS_PERC);
   FastLED.show();
+  
+  #if defined(SERIAL_DEBUG) && SERIAL_DEBUG == 1
+    Serial.println(F("Enabling IR In"));
+  #endif
+  IrReceiver.enableIRIn();  // Start the receiver
+  #if defined(SERIAL_DEBUG) && SERIAL_DEBUG == 1
+    Serial.print(F("Ready to receive IR signals at pin "));
+    Serial.println(IR_RECEIVE_PIN);
+  #endif
 }
 
 void loop() {
-  mode_hue();
+  mode_snake();
 }

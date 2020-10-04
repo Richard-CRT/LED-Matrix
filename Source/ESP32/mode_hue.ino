@@ -18,6 +18,15 @@ void mode_hue()
         leds[(y*MATRIX_WIDTH)+x].setHue(hues[x+y]);
       }
     }
+    
+    uint16_t buttonCode;
+    while (poll_ir_remote_buttons(buttonCode))
+    {
+      switch (buttonCode)
+      {
+        // hue mode doesn't have any specific controls
+      }
+    }
     FastLED.show();
   }
 }
