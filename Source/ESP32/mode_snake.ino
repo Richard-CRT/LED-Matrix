@@ -124,10 +124,21 @@ void mode_snake()
               break;
           }
 
-          // Assign and render new start of snake
+          // Assign new start of snake
           snake_cells[0] = &grid[start_snake_grid_y][start_snake_grid_x];
           snake_cells[0]->snake = true;
-          leds[((start_snake_grid_y+1)*MATRIX_WIDTH) + start_snake_grid_x + 1] = CRGB::White;
+
+          // Render snake
+          //leds[((start_snake_grid_y+1)*MATRIX_WIDTH) + start_snake_grid_x + 1] = CRGB::White;
+          for (uint16_t i = 0; i < snake_length; i++)
+          {
+              float snake_percentage = (float)i / (snake_length-1);
+              uint8_t brightness = (1 - (snake_percentage * 0.9)) * 255;
+              
+              uint8_t snake_grid_x = snake_cells[i]->x;
+              uint8_t snake_grid_y = snake_cells[i]->y;
+              leds[((snake_grid_y+1)*MATRIX_WIDTH) + snake_grid_x + 1] = CRGB(brightness, brightness, brightness);
+          }
 
           // Check if eaten an apple
           if (start_snake_grid_y == apple_cell->y && start_snake_grid_x == apple_cell->x)

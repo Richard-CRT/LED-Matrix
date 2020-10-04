@@ -10,7 +10,7 @@ void setBrightnessPercentage(int8_t newBrightnessPercentage)
     newBrightnessPercentage = MAX_BRIGHTNESS_PERC;
 
   currentBrightnessPercentage = newBrightnessPercentage;
-  FastLED.setBrightness((newBrightnessPercentage / (double)100) * 255);
+  FastLED.setBrightness((newBrightnessPercentage / (float)100) * 255);
 }
 
 void cycleBrightness()
