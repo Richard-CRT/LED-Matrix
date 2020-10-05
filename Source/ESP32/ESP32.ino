@@ -1,5 +1,12 @@
 #include "globals.h"
 #include "brightness.h"
+#include "mode_snake.h"
+
+void Render()
+{
+  FastLED.show();
+  delay(5);
+}
 
 void setAllLeds(CRGB colour)
 {
@@ -38,7 +45,7 @@ void setup() {
   FastLED.addLeds<WS2812B, LED_DATA_PIN, GRB>(leds, NUM_LEDS);
   setAllLeds(CRGB::Black);
   setBrightnessPercentage(DEFAULT_BRIGHTNESS_PERC);
-  FastLED.show();
+  Render();
   
   #if defined(SERIAL_DEBUG) && SERIAL_DEBUG == 1
     Serial.println(F("Enabling IR In"));

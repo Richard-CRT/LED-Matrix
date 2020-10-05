@@ -8,7 +8,4 @@
 
 int8_t currentBrightnessPercentage = DEFAULT_BRIGHTNESS_PERC;
 
-void setBrightnessPercentage(int8_t newBrightnessPercentage);
-void cycleBrightness();
-
 #endif

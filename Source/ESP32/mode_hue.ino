@@ -27,6 +27,6 @@ void mode_hue()
         // hue mode doesn't have any specific controls
       }
     }
-    FastLED.show();
+    Render();
   }
 }

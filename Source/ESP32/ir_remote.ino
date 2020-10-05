@@ -1,6 +1,14 @@
 #include "globals.h"
 #include "brightness.h"
 
+void empty_ir_remote_queue()
+{
+    uint16_t buttonCode;
+    while (poll_ir_remote_buttons(buttonCode))
+    {
+    }
+}
+
 bool poll_ir_remote_buttons(uint16_t & buttonCode)
 {
   if (IrReceiver.decode()) {
