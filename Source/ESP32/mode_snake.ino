@@ -1,6 +1,6 @@
 #include "mode_snake.h"
 
-void snake_set_difficulty_border_leds(snake_difficulty_t snake_difficulty, CRGB colour)
+void snake_set_difficulty_border_leds(const snake_difficulty_t & snake_difficulty, CRGB colour)
 {
   uint8_t difficulty = static_cast<uint8_t>(snake_difficulty);
   if (difficulty >= 0 && difficulty <= 3)
@@ -16,6 +16,76 @@ void snake_set_difficulty_border_leds(snake_difficulty_t snake_difficulty, CRGB 
   }
 }
 
+void snake_tick_difficulty_snake(snake_difficulty_snake_t & difficulty_snake)
+{
+  uint8_t milliseconds_delay_between_tick = 150;
+  switch (difficulty_snake.difficulty)
+  {
+    case snake_difficulty_t::easy:
+      milliseconds_delay_between_tick = 200;
+      break;
+    case snake_difficulty_t::medium:
+      milliseconds_delay_between_tick = 150;
+      break;
+    case snake_difficulty_t::hard:
+      milliseconds_delay_between_tick = 100;
+      break;
+    case snake_difficulty_t::insane:
+      milliseconds_delay_between_tick = 50;
+      break;
+  }
+  
+  uint32_t current_millis = millis();
+  if (current_millis - difficulty_snake.last_tick_millis > milliseconds_delay_between_tick)
+  {
+    difficulty_snake.last_tick_millis = current_millis;
+    
+    const uint8_t difficulty_snake_length = 3;
+    
+    uint8_t difficulty = static_cast<uint8_t>(difficulty_snake.difficulty);
+    if (difficulty >= 0 && difficulty <= 3)
+    {
+      uint8_t middleY = 1 + (difficulty * 5) + 1;
+  
+      for (uint16_t i = 0; i < difficulty_snake_length; i++)
+      {
+          leds[(middleY*MATRIX_WIDTH) + 3 + difficulty_snake.position - i] = CRGB::Black;
+      }   
+  
+      // change pos
+      if (difficulty_snake.direction == snake_direction_t::right)
+      {
+        if (difficulty_snake.position < 13)
+        {
+          difficulty_snake.position++;
+        }
+        else
+        {
+          difficulty_snake.direction = snake_direction_t::left;
+          difficulty_snake.position--;
+        }
+      }
+      else
+      {
+        if (difficulty_snake.position > 2)
+        {
+          difficulty_snake.position--;
+        }
+        else
+        {
+          difficulty_snake.direction = snake_direction_t::right;
+          difficulty_snake.position++;
+        }
+      }
+      
+      for (uint16_t i = 0; i < difficulty_snake_length; i++)
+      {
+          leds[(middleY*MATRIX_WIDTH) + 3 + difficulty_snake.position - i] = CRGB::White;
+      }    
+    }
+  }
+}
+
 snake_difficulty_t snake_difficulty_selection(snake_difficulty_t snake_difficulty_default)
 {
   setAllLeds(CRGB::Black);
@@ -23,6 +93,31 @@ snake_difficulty_t snake_difficulty_selection(snake_difficulty_t snake_difficult
 
   snake_difficulty_t snake_difficulty = snake_difficulty_default;
   snake_difficulty_t chosen_snake_difficulty = snake_difficulty_t::unknown;
+
+  snake_difficulty_snake_t easy_difficulty_snake;
+  easy_difficulty_snake.position = 6;
+  easy_difficulty_snake.direction = snake_direction_t::right;
+  easy_difficulty_snake.difficulty = snake_difficulty_t::easy;
+  easy_difficulty_snake.last_tick_millis = 0;
+  
+  snake_difficulty_snake_t medium_difficulty_snake;
+  medium_difficulty_snake.position = 6;
+  medium_difficulty_snake.direction = snake_direction_t::right;
+  medium_difficulty_snake.difficulty = snake_difficulty_t::medium;
+  medium_difficulty_snake.last_tick_millis = 0;
+  
+  snake_difficulty_snake_t hard_difficulty_snake;
+  hard_difficulty_snake.position = 6;
+  hard_difficulty_snake.direction = snake_direction_t::right;
+  hard_difficulty_snake.difficulty = snake_difficulty_t::hard;
+  hard_difficulty_snake.last_tick_millis = 0;
+  
+  snake_difficulty_snake_t insane_difficulty_snake;
+  insane_difficulty_snake.position = 6;
+  insane_difficulty_snake.direction = snake_direction_t::right;
+  insane_difficulty_snake.difficulty = snake_difficulty_t::insane;
+  insane_difficulty_snake.last_tick_millis = 0;
+  
 
   while (chosen_snake_difficulty == snake_difficulty_t::unknown)
   {
@@ -32,6 +127,12 @@ snake_difficulty_t snake_difficulty_selection(snake_difficulty_t snake_difficult
     snake_set_difficulty_border_leds(snake_difficulty_t::insane, CRGB::Red);
         
     snake_set_difficulty_border_leds(snake_difficulty, CRGB::Green);
+
+    snake_tick_difficulty_snake(easy_difficulty_snake);
+    snake_tick_difficulty_snake(medium_difficulty_snake);
+    snake_tick_difficulty_snake(hard_difficulty_snake);
+    snake_tick_difficulty_snake(insane_difficulty_snake);
+    
     Render();
     
     uint16_t buttonCode;
