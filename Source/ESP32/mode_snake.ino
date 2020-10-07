@@ -1,5 +1,27 @@
 #include "mode_snake.h"
 
+uint8_t difficulty_to_milliseconds_delay_between_tick(const snake_difficulty_t & snake_difficulty)
+{
+  uint8_t milliseconds_delay_between_tick = 150;
+  switch (snake_difficulty)
+  {
+    case snake_difficulty_t::easy:
+      milliseconds_delay_between_tick = 200;
+      break;
+    case snake_difficulty_t::medium:
+      milliseconds_delay_between_tick = 150;
+      break;
+    case snake_difficulty_t::hard:
+      milliseconds_delay_between_tick = 100;
+      break;
+    case snake_difficulty_t::insane:
+      milliseconds_delay_between_tick = 50;
+      break;
+  }
+
+  return milliseconds_delay_between_tick;
+}
+
 void snake_set_difficulty_border_leds(const snake_difficulty_t & snake_difficulty, CRGB colour)
 {
   uint8_t difficulty = static_cast<uint8_t>(snake_difficulty);
@@ -18,22 +40,7 @@ void snake_set_difficulty_border_leds(const snake_difficulty_t & snake_difficult
 
 void snake_tick_difficulty_snake(snake_difficulty_snake_t & difficulty_snake)
 {
-  uint8_t milliseconds_delay_between_tick = 150;
-  switch (difficulty_snake.difficulty)
-  {
-    case snake_difficulty_t::easy:
-      milliseconds_delay_between_tick = 200;
-      break;
-    case snake_difficulty_t::medium:
-      milliseconds_delay_between_tick = 150;
-      break;
-    case snake_difficulty_t::hard:
-      milliseconds_delay_between_tick = 100;
-      break;
-    case snake_difficulty_t::insane:
-      milliseconds_delay_between_tick = 50;
-      break;
-  }
+  uint8_t milliseconds_delay_between_tick = difficulty_to_milliseconds_delay_between_tick(difficulty_snake.difficulty);
   
   uint32_t current_millis = millis();
   if (current_millis - difficulty_snake.last_tick_millis > milliseconds_delay_between_tick)
@@ -86,7 +93,7 @@ void snake_tick_difficulty_snake(snake_difficulty_snake_t & difficulty_snake)
   }
 }
 
-snake_difficulty_t snake_difficulty_selection(snake_difficulty_t snake_difficulty_default)
+snake_difficulty_t snake_difficulty_selection(const snake_difficulty_t & snake_difficulty_default)
 {
   setAllLeds(CRGB::Black);
   setBorderLeds(CRGB::Blue);
@@ -204,27 +211,12 @@ void snake_flash_success()
   }
 }
 
-void snake_main_game(snake_difficulty_t snake_difficulty)
+void snake_main_game(const snake_difficulty_t & snake_difficulty)
 {  
   setAllLeds(CRGB::Black);
   setBorderLeds(CRGB::Blue);
 
-  uint8_t millisecondsDelayBetweenTick = 150;
-  switch (snake_difficulty)
-  {
-    case snake_difficulty_t::easy:
-      millisecondsDelayBetweenTick = 200;
-      break;
-    case snake_difficulty_t::medium:
-      millisecondsDelayBetweenTick = 150;
-      break;
-    case snake_difficulty_t::hard:
-      millisecondsDelayBetweenTick = 100;
-      break;
-    case snake_difficulty_t::insane:
-      millisecondsDelayBetweenTick = 50;
-      break;
-  }
+  uint8_t milliseconds_delay_between_tick = difficulty_to_milliseconds_delay_between_tick(snake_difficulty);
   
   snake_grid_cell_t grid[MATRIX_HEIGHT-2][MATRIX_WIDTH-2];
   for (uint8_t y = 0; y < MATRIX_HEIGHT-2; y++)
