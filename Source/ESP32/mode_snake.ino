@@ -211,12 +211,39 @@ void snake_flash_success()
   }
 }
 
+void snake_choose_apple(snake_grid_cell_t *& apple_cell, uint16_t snake_length, snake_grid_cell_t grid[][MATRIX_WIDTH-2])
+{
+  uint16_t random_location = random(SNAKE_MAX_LENGTH - snake_length);
+  int16_t count = -1;
+  bool found_apple_location = false;
+  for (uint8_t y = 0; y < MATRIX_HEIGHT-2; y++)
+  {
+    for (uint8_t x = 0; x < MATRIX_WIDTH-2; x++)
+    {
+      if (!grid[y][x].snake)
+      {
+        count++;
+        if (count == random_location)
+        {
+          apple_cell = &grid[y][x];
+          found_apple_location = true;
+          break;
+        }
+      }
+    }
+    if (found_apple_location)
+      break;
+  }
+  
+  leds[((apple_cell->y+1)*MATRIX_WIDTH) + apple_cell->x + 1] = CRGB::Green;
+}
+
 void snake_main_game(const snake_difficulty_t & snake_difficulty)
 {  
   setAllLeds(CRGB::Black);
   setBorderLeds(CRGB::Blue);
 
-  uint8_t milliseconds_delay_between_tick = difficulty_to_milliseconds_delay_between_tick(snake_difficulty);
+  uint8_t millisecondsDelayBetweenTick = difficulty_to_milliseconds_delay_between_tick(snake_difficulty);
   
   snake_grid_cell_t grid[MATRIX_HEIGHT-2][MATRIX_WIDTH-2];
   for (uint8_t y = 0; y < MATRIX_HEIGHT-2; y++)
@@ -251,7 +278,7 @@ void snake_main_game(const snake_difficulty_t & snake_difficulty)
   snake_direction_t snake_direction = new_snake_direction;
 
   snake_grid_cell_t * apple_cell;
-  apple_cell = &grid[14][14];
+  snake_choose_apple(apple_cell, snake_length, grid);
   leds[((apple_cell->y+1)*MATRIX_WIDTH) + apple_cell->x + 1] = CRGB::Green;
 
   bool ate_apple_last_tick = false;
@@ -359,30 +386,8 @@ void snake_main_game(const snake_difficulty_t & snake_difficulty)
           {
             // Generate new apple
             ate_apple_last_tick = true;
-  
-            uint16_t random_location = random(SNAKE_MAX_LENGTH - snake_length);
-            int16_t count = -1;
-            bool found_apple_location = false;
-            for (uint8_t y = 0; y < MATRIX_HEIGHT-2; y++)
-            {
-              for (uint8_t x = 0; x < MATRIX_WIDTH-2; x++)
-              {
-                if (!grid[y][x].snake)
-                {
-                  count++;
-                  if (count == random_location)
-                  {
-                    apple_cell = &grid[y][x];
-                    found_apple_location = true;
-                    break;
-                  }
-                }
-              }
-              if (found_apple_location)
-                break;
-            }
-            
-            leds[((apple_cell->y+1)*MATRIX_WIDTH) + apple_cell->x + 1] = CRGB::Green;
+
+            snake_choose_apple(apple_cell, snake_length, grid);
           }
           
           Render();
