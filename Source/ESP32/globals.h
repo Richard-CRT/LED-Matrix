@@ -17,4 +17,8 @@
 IRrecv IrReceiver(IR_RECEIVE_PIN);
 CRGB leds[NUM_LEDS];
 
+enum class MatrixMode_t { blank, hue, snake };
+
+MatrixMode_t matrixMode = MatrixMode_t::blank;
+
 #endif

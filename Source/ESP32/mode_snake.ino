@@ -126,7 +126,7 @@ snake_difficulty_t snake_difficulty_selection(const snake_difficulty_t & snake_d
   insane_difficulty_snake.last_tick_millis = 0;
   
 
-  while (chosen_snake_difficulty == snake_difficulty_t::unknown)
+  while (matrixMode == MatrixMode_t::snake && chosen_snake_difficulty == snake_difficulty_t::unknown)
   {
     snake_set_difficulty_border_leds(snake_difficulty_t::easy, CRGB::Red);
     snake_set_difficulty_border_leds(snake_difficulty_t::medium, CRGB::Red);
@@ -238,7 +238,7 @@ void snake_choose_apple(snake_grid_cell_t *& apple_cell, uint16_t snake_length, 
   leds[((apple_cell->y+1)*MATRIX_WIDTH) + apple_cell->x + 1] = CRGB::Green;
 }
 
-void snake_main_game(const snake_difficulty_t & snake_difficulty)
+void snake_main_game(const snake_difficulty_t & snake_difficulty, bool & quitToSelectDifficulty)
 {  
   setAllLeds(CRGB::Black);
   setBorderLeds(CRGB::Blue);
@@ -286,7 +286,7 @@ void snake_main_game(const snake_difficulty_t & snake_difficulty)
   uint32_t lastTickMillis = millis();
   bool failed = false;
   bool won = false;
-  while (!failed && !won)
+  while (!failed && !won && !quitToSelectDifficulty && matrixMode == MatrixMode_t::snake)
   {
     uint32_t currentMillis = millis();
     if (currentMillis - lastTickMillis > millisecondsDelayBetweenTick)
@@ -400,6 +400,10 @@ void snake_main_game(const snake_difficulty_t & snake_difficulty)
     {
       switch (buttonCode)
       {
+        case IR_REMOTE_BUTTON_CODE_BACK_CLICK:
+        case IR_REMOTE_BUTTON_CODE_BACK_HOLD:
+          quitToSelectDifficulty = true;
+          break;
         case IR_REMOTE_BUTTON_CODE_LEFT_CLICK:
         case IR_REMOTE_BUTTON_CODE_LEFT_HOLD:
           if (snake_direction != snake_direction_t::right)
@@ -433,10 +437,16 @@ void snake_main_game(const snake_difficulty_t & snake_difficulty)
 
 void mode_snake()
 {
+  bool selectDifficultyNextRound = true;
   snake_difficulty_t snake_difficulty = snake_difficulty_t::medium;
-  while (true)
+  while (matrixMode == MatrixMode_t::snake)
   {
-    snake_difficulty = snake_difficulty_selection(snake_difficulty);
-    snake_main_game(snake_difficulty);
+    if (selectDifficultyNextRound)
+    {
+      selectDifficultyNextRound = false;
+      snake_difficulty = snake_difficulty_selection(snake_difficulty);
+    }
+    if (matrixMode == MatrixMode_t::snake)
+      snake_main_game(snake_difficulty, selectDifficultyNextRound);
   }
 }

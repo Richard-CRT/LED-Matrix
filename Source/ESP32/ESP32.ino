@@ -58,5 +58,16 @@ void setup() {
 }
 
 void loop() {
-  mode_snake();
+  switch (matrixMode)
+  {
+    case MatrixMode_t::blank:
+      mode_blank();
+      break;
+    case MatrixMode_t::hue:
+      mode_hue();
+      break;
+    case MatrixMode_t::snake:
+      mode_snake();
+      break;
+  }
 }

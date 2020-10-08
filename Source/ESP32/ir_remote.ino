@@ -82,7 +82,8 @@ bool poll_ir_remote_buttons(uint16_t & buttonCode)
             break;
             
           default:
-            Serial.println("IR Remote Button - Unknown");
+            Serial.print("IR Remote Button - Unknown - 0x");
+            Serial.println(buttonCode, HEX);
             break;
         }
       #endif
@@ -90,6 +91,7 @@ bool poll_ir_remote_buttons(uint16_t & buttonCode)
       {
         case IR_REMOTE_BUTTON_CODE_HOME_CLICK:
           // return to blank
+          matrixMode = MatrixMode_t::blank;
           break;
         case IR_REMOTE_BUTTON_CODE_STAR_CLICK:
           // cycle brightness
@@ -97,9 +99,33 @@ bool poll_ir_remote_buttons(uint16_t & buttonCode)
           break;
         case IR_REMOTE_BUTTON_CODE_DOUBLELEFT_CLICK:
           // previous mode
+          switch (matrixMode)
+          {
+            case MatrixMode_t::blank:
+              matrixMode = MatrixMode_t::snake;
+              break;
+            case MatrixMode_t::hue:
+              matrixMode = MatrixMode_t::snake;
+              break;
+            case MatrixMode_t::snake:
+              matrixMode = MatrixMode_t::hue;
+              break;
+          }
           break;
         case IR_REMOTE_BUTTON_CODE_DOUBLERIGHT_CLICK:
           // next mode
+          switch (matrixMode)
+          {
+            case MatrixMode_t::blank:
+              matrixMode = MatrixMode_t::hue;
+              break;
+            case MatrixMode_t::hue:
+              matrixMode = MatrixMode_t::snake;
+              break;
+            case MatrixMode_t::snake:
+              matrixMode = MatrixMode_t::hue;
+              break;
+          }
           break;
       }
     }

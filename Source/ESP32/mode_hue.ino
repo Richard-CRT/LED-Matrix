@@ -5,7 +5,7 @@ void mode_hue()
   {
     hues[i] = i*3;
   }
-  while (true)
+  while (matrixMode == MatrixMode_t::hue)
   {
     for (byte i = 0; i < 39; i++)
     {
