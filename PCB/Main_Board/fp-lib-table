@@ -1,4 +1,5 @@
 (fp_lib_table
   (lib (name SamacSys)(type KiCad)(uri ${KIPRJMOD}/../Libraries/SamacSys_Parts.pretty)(options "")(descr ""))
-  (lib (name Artwork)(type KiCad)(uri D:/Users/Richard/OneDrive/Projects/LED_Matrix/v2/PCB/Libraries/Artwork.pretty)(options "")(descr ""))
+  (lib (name Artwork)(type KiCad)(uri ${KIPRJMOD}/../Libraries/Artwork.pretty)(options "")(descr ""))
+  (lib (name Missing_Models)(type KiCad)(uri ${KIPRJMOD}/../Libraries/Missing_Models.pretty)(options "")(descr ""))
 )

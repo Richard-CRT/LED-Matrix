@@ -60,7 +60,7 @@ U 1 1 5F8C939F
 P 1700 1900
 F 0 "J2" H 1618 2117 50  0000 C CNN
 F 1 "Screw_Terminal_01x02" H 1618 2026 50  0000 C CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 1700 1900 50  0001 C CNN
+F 2 "Missing_Models:TerminalBlock_bornier-2_P5.08mm" H 1700 1900 50  0001 C CNN
 F 3 "~" H 1700 1900 50  0001 C CNN
 F 4 "https://www.mouser.co.uk/ProductDetail/CUI-Devices/TB006-508-02BE?qs=vLWxofP3U2wEdOVV%2FaT04w%3D%3D" H 1700 1900 50  0001 C CNN "Product"
 	1    1700 1900
