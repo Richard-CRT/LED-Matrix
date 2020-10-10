@@ -111,7 +111,7 @@ bool poll_ir_remote_buttons(uint16_t & buttonCode)
               matrixMode = MatrixMode_t::hue;
               break;
             case MatrixMode_t::hue:
-              matrixMode = MatrixMode_t::snake;
+              matrixMode = MatrixMode_t::audio;
               break;
           }
           break;

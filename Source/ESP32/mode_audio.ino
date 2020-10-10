@@ -51,7 +51,7 @@ void mode_audio()
   analogReadResolution(ADC_BIT);
 
   uint32_t lastReadMillis = 0;
-  while (true)
+  while (matrixMode == MatrixMode_t::audio)
   {
     uint32_t currentMillis = millis();
     
@@ -100,9 +100,6 @@ void mode_audio()
         {
           leds[((2+i)*MATRIX_WIDTH)+(10+freq_no)] = CRGB::Black;
         }
-
-        Serial.print(left_value_max[freq_no]);
-        Serial.print("\t");
         
         uint8_t left_column_height_max = audio_adc_to_column_height(left_value_max[freq_no]);
         if (left_column_height_max > 0)
@@ -113,27 +110,16 @@ void mode_audio()
           leds[((1+right_column_height_max)*MATRIX_WIDTH)+(10+freq_no)] = CRGB::Yellow;
         
       }
-      Serial.println();
       Render();
-
-      /*
-      // Serial output
-      for (uint8_t i=0; i < 7; i++)
+    }
+    
+    uint16_t buttonCode;
+    while (poll_ir_remote_buttons(buttonCode))
+    {
+      switch (buttonCode)
       {
-        uint16_t left_value = MSGEQ7.getL(i);
-        Serial.print(left_value);
-        Serial.print('\t');
+        // audio mode doesn't have any specific controls
       }
-      Serial.print('\t');
-      Serial.print('\t');
-      for (uint8_t i=0; i < 7; i++)
-      {
-        uint16_t right_value = MSGEQ7.getR(i);
-        Serial.print(right_value);
-        Serial.print('\t');
-      }
-      Serial.println();
-      */
     }
   }
 }

@@ -19,6 +19,7 @@ CRGB leds[NUM_LEDS];
 
 enum class MatrixMode_t { blank, hue, snake, audio };
 
-MatrixMode_t matrixMode = MatrixMode_t::audio;
+MatrixMode_t matrixMode = MatrixMode_t::blank
+;
 
 #endif
