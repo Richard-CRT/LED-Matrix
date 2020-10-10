@@ -69,5 +69,8 @@ void loop() {
     case MatrixMode_t::snake:
       mode_snake();
       break;
+    case MatrixMode_t::audio:
+      mode_audio();
+      break;
   }
 }

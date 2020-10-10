@@ -102,13 +102,16 @@ bool poll_ir_remote_buttons(uint16_t & buttonCode)
           switch (matrixMode)
           {
             case MatrixMode_t::blank:
-              matrixMode = MatrixMode_t::snake;
+              matrixMode = MatrixMode_t::audio;
               break;
-            case MatrixMode_t::hue:
+            case MatrixMode_t::audio:
               matrixMode = MatrixMode_t::snake;
               break;
             case MatrixMode_t::snake:
               matrixMode = MatrixMode_t::hue;
+              break;
+            case MatrixMode_t::hue:
+              matrixMode = MatrixMode_t::snake;
               break;
           }
           break;
@@ -123,6 +126,9 @@ bool poll_ir_remote_buttons(uint16_t & buttonCode)
               matrixMode = MatrixMode_t::snake;
               break;
             case MatrixMode_t::snake:
+              matrixMode = MatrixMode_t::audio;
+              break;
+            case MatrixMode_t::audio:
               matrixMode = MatrixMode_t::hue;
               break;
           }
